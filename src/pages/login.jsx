@@ -60,7 +60,7 @@ export default function Login() {
     <div className='main'>
         <div className='frame-main'>
             <div className={blackBox}>
-              <p className={blackBox === 'black_l-s' ? "black-p1_l-s"  : "black-p1_s-l"}>WELCOME BACK!</p>
+              <p className={blackBox === 'black_l-s' ? "black-p1_l-s"  : "black-p1_s-l"}>{state === 'login' ? "WELCOME BACK!"  : "WELCOME!"}</p>
               <p className={blackBox === 'black_l-s' ? "black-p2_l-s"  : "black-p2_s-l"}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum</p>
             
             </div>
