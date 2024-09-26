@@ -10,9 +10,7 @@
 
 
 .frame-main {
-    -webkit-box-shadow: 5px -3px 73px -53px rgba(31, 31, 31, 0.57);
-    -moz-box-shadow: 5px -3px 73px -53px rgba(31, 31, 31, 0.57);
-    box-shadow: 5px -3px 73px -53px rgba(31, 31, 31, 0.57);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 
 
 
@@ -21,6 +19,7 @@
 
     display: flex;
     position: absolute;
+    border-radius: 16px;
     /* z-index: -2; */
 
 
