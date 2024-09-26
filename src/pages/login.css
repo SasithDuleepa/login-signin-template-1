@@ -1,0 +1,460 @@
+.main {
+    width: 100vw;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+
+.frame-main {
+    -webkit-box-shadow: 5px -3px 73px -53px rgba(31, 31, 31, 0.57);
+    -moz-box-shadow: 5px -3px 73px -53px rgba(31, 31, 31, 0.57);
+    box-shadow: 5px -3px 73px -53px rgba(31, 31, 31, 0.57);
+
+
+
+    width: 800px;
+    height: 500px;
+
+    display: flex;
+    position: absolute;
+    /* z-index: -2; */
+
+
+
+    overflow: hidden;
+
+    /* animation: main_frame 5s ease-in-out; */
+}
+
+.black_l-s {
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.956);
+    animation: black_box_l-s 2s;
+    position: absolute;
+    width: 1200px;
+    height: 1200px;
+    rotate: 55deg;
+    inset: -110% 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+.black_s-l {
+    background-color: rgba(0, 0, 0, 0.956);
+    animation: black_box_s-l 2s forwards;
+    position: absolute;
+    width: 1200px;
+    height: 1200px;
+    rotate: 30deg;
+    inset: -130% -100%;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.white_l-s {
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 500px;
+    /* z-index: -1; */
+    position: absolute;
+
+    animation: white_box_l_s 2s forwards;
+}
+
+.white_s-l {
+    background-color: rgb(255, 255, 255);
+    width: 400px;
+    height: 500px;
+    /* z-index: -1; */
+    position: absolute;
+
+    animation: white_box_s_l 2s forwards;
+
+    transform: translateX(10%);
+}
+
+
+
+/* Define the keyframes */
+
+
+@keyframes main_frame {
+    0% {}
+
+    25% {}
+
+    50% {}
+
+    75% {}
+
+    100% {}
+}
+
+@keyframes black_box_l-s {
+    0% {
+        rotate: 30deg;
+        inset: -130% -100%;
+    }
+
+    1000% {
+        rotate: 55deg;
+        inset: -110% 55%;
+    }
+}
+
+@keyframes black_box_s-l {
+    0% {
+        rotate: 55deg;
+        inset: -110% 55%;
+    }
+
+
+    100% {
+        rotate: 30deg;
+        inset: -130% -100%;
+    }
+
+
+
+
+
+}
+
+
+@keyframes white_box_l_s {
+    0% {
+        opacity: 1;
+        transform: translateX(100%);
+
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateX(180%);
+    }
+
+    60% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+
+
+
+    }
+}
+
+@keyframes white_box_s_l {
+    100% {
+        opacity: 1;
+        transform: translateX(100%);
+
+    }
+
+    60% {
+        opacity: 0;
+        transform: translateX(180%);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+
+
+
+    }
+}
+
+
+
+.btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+
+
+
+
+
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.login_p {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.form_div_main {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form_div_sub {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.btn_login {
+    background-color: black;
+    border-radius: 40px;
+    height: 30px;
+    width: 100%;
+    margin: 0px 10px;
+    color: white;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.btn_ {
+    border: none;
+    background-color: transparent;
+    color: blue;
+}
+
+
+
+/* From Uiverse.io by AbanoubMagdy1 */
+.wave-group {
+    position: relative;
+}
+
+.wave-group .input {
+    font-size: 16px;
+    padding: 10px 5px 10px 10px;
+    display: block;
+    width: 185px;
+    border: none;
+    border-bottom: 2px solid #000000;
+    background: transparent;
+}
+
+.wave-group .input:focus {
+    outline: none;
+}
+
+.wave-group .label {
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    display: flex;
+
+}
+
+.wave-group .label-char {
+    transition: 0.2s ease all;
+    transition-delay: calc(var(--index) * 0.05s);
+}
+
+.wave-group .input:focus~.label .label-char,
+.wave-group .input:valid~.label .label-char {
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: #000000;
+}
+
+.wave-group .bar {
+    position: relative;
+    display: block;
+    width: 200px;
+}
+
+.wave-group .bar:before,
+.wave-group .bar:after {
+    content: '';
+    height: 2px;
+    width: 0;
+    bottom: 1px;
+    position: absolute;
+    background: #000000;
+    transition: 0.2s ease all;
+
+
+}
+
+.wave-group .bar:before {
+    left: 50%;
+}
+
+.wave-group .bar:after {
+    right: 50%;
+}
+
+.wave-group .input:focus~.bar:before,
+.wave-group .input:focus~.bar:after {
+    width: 50%;
+
+}
+
+
+.bottom_div {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.black-p1_s-l {
+    color: white;
+    font-size: 35px;
+    z-index: 3;
+    position: relative;
+    top: 36%;
+    left: 35%;
+
+    rotate: -30deg;
+    animation: p1-l-s 3.5s forwards;
+    opacity: 1;
+
+}
+
+.black-p1_l-s {
+
+    color: white;
+    font-size: 35px;
+    z-index: 3;
+    position: relative;
+    top: 80%;
+    left: -24%;
+    rotate: -55deg;
+    animation: p1-s-l 3.5s forwards;
+    opacity: 1;
+
+
+
+}
+
+.black-p2_s-l {
+    color: white;
+    font-size: 24px;
+    z-index: 3;
+    position: relative;
+    top: 34%;
+    left: 76%;
+    rotate: -30deg;
+    width: 300px;
+    text-align: left;
+    animation: p1-l-s 3.5s forwards;
+    opacity: 1;
+
+
+}
+
+.black-p2_l-s {
+
+    color: white;
+    font-size: 24px;
+    z-index: 3;
+    position: relative;
+    top: 70%;
+    left: 25%;
+    rotate: -55deg;
+    width: 300px;
+    text-align: right;
+    animation: p1-s-l 3.5s forwards;
+    opacity: 1;
+
+}
+
+
+
+@keyframes p1-l-s {
+    0% {
+        opacity: 0;
+    }
+
+    25% {}
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {}
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes p1-s-l {
+    0% {
+        opacity: 0;
+    }
+
+    25% {}
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {}
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes p2-l-s {
+    0% {
+        opacity: 0;
+    }
+
+    25% {}
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {}
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes p2-s-l {
+    0% {
+        opacity: 0;
+    }
+
+    25% {}
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {}
+
+    100% {
+        opacity: 1;
+    }
+}
